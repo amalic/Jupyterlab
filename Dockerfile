@@ -7,8 +7,6 @@ RUN pip install jupyterlab numpy scipy matplotlib ipython pandas sympy seaborn n
 
 COPY entrypoint.sh /usr/local/bin/
 
-#RUN chmod +x /usr/local/bin/entrypoint.sh
-
 EXPOSE 8888
 WORKDIR /notebooks
 ENTRYPOINT ["entrypoint.sh"]
