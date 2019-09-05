@@ -7,15 +7,15 @@ Volumes can be mounted into `/notebooks` folder. If the folder contains a requir
 
 ### Build
 ```
-docker build -t jupyterlab .
+docker build -t amalic/jupyterlab:local .
 ```
 
 ### Run
 ```
-docker run --rm -it -p 8888:8888 jupyterlab
+docker run --rm -it -p 8888:8888 amalic/jupyterlab:local
 ```
 
 or if you want to define your own password
 ```
-docker run --rm -it -p 8888:8888 -e PASSWORD="<your_password>" jupyterlab
+docker run --rm -it -p 8888:8888 -e PASSWORD="<your_password>" amalic/jupyterlab:local
 ```
