@@ -3,7 +3,7 @@
 This Docker container runs as root user! It can be helpful when e.g. the popular jupyter-datascience does not work because it runs as Jovyan user. 
 
 ### Your notebooks
-Volumes can be mounted into `/notebooks` folder. If the folder contains a requirements.txt file, it will automatically be installed.
+Volumes can be mounted into `/notebooks` folder. If the folder contains a requirements.txt file, it will be automatically installed.
 
 ### Build
 ```
