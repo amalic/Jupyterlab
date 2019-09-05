@@ -8,7 +8,7 @@ else
 fi
 
 echo
-echo "Following software versions are installed"
+echo "Installed software:"
 python --version
 pip --version
 jupyter --version
@@ -16,7 +16,7 @@ echo "Node $(node --version)"
 echo "NPM $(npm -v)"
 
 echo
-echo "Following python packages are installed locally:"
+echo "Installed Python packages:"
 pip list -l
 
 CMD="jupyter lab --allow-root --ip=0.0.0.0 --no-browser"
