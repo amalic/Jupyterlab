@@ -8,6 +8,14 @@ else
 fi
 
 echo
+echo "Following software versions are installed"
+python --version
+pip --version
+jupyter --version
+echo "Node $(node --version)"
+echo "NPM $(npm -v)"
+
+echo
 echo "Following python packages are installed locally:"
 pip list -l
 
