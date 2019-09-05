@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y nodejs && \
 
 ENV SHELL="bash"
 COPY entrypoint.sh /usr/local/bin/
+COPY plugin.jupyterlab-settings /root/.jupyter/lab/user-settings/@jupyterlab/terminal-extension/plugin.jupyterlab-settings
 
 EXPOSE 8888
 WORKDIR /notebooks
