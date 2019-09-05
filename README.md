@@ -9,5 +9,5 @@ docker build -t jupyterlab .
 
 Run
 ```
-docker run --rm -i -p 8888:8888 jupyterlab
+docker run --rm -it -p 8888:8888 jupyterlab
 ```
