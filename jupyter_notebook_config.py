@@ -320,7 +320,7 @@
 #c.NotebookApp.ssl_options = {}
 
 ## Supply overrides for terminado. Currently only supports "shell_command".
-c.NotebookApp.terminado_settings = {'shell_command': 'bash''}
+c.NotebookApp.terminado_settings = {'shell_command': 'bash'}
 
 ## Set to False to disable terminals.
 #  
