@@ -6,8 +6,8 @@ RUN git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it && \
 RUN apt-get update && apt-get install -y nodejs && \
   pip install jupyterlab numpy scipy matplotlib ipython pandas sympy seaborn nose
 
-ENV SHELL="bash"
 COPY entrypoint.sh /usr/local/bin/
+COPY jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
 COPY plugin.jupyterlab-settings /root/.jupyter/lab/user-settings/@jupyterlab/terminal-extension/plugin.jupyterlab-settings
 
 EXPOSE 8888
