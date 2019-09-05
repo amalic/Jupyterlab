@@ -11,3 +11,8 @@ Run
 ```
 docker run --rm -it -p 8888:8888 jupyterlab
 ```
+
+or if you want to define your own password
+```
+docker run --rm -it -p 8888:8888 -e PASSWORD="<your password>" jupyterlab
+```
