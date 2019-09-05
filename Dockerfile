@@ -5,7 +5,7 @@ RUN git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it && \
 
 RUN apt-get update && apt-get install -y nodejs npm && rm -rf /var/lib/apt/lists/* && \
   pip install jupyterlab ipywidgets numpy scipy matplotlib ipython pandas sympy seaborn nose && \
-  jupyter nbextension enable --py widgetsnbextension
+  jupyter labextension install @jupyter-widgets/jupyterlab-manager
 
 COPY bin/entrypoint.sh /usr/local/bin/
 COPY config/jupyter_notebook_config.py /root/.jupyter/
