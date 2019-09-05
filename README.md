@@ -5,12 +5,12 @@ This Docker container runs as root user! It can be helpful when e.g. the popular
 ### Your notebooks
 Volumes can be mounted into `/notebooks` folder. If the folder contains a requirements.txt file, it will automatically be installed.
 
-Build
+### Build
 ```
 docker build -t jupyterlab .
 ```
 
-Run
+### Run
 ```
 docker run --rm -it -p 8888:8888 jupyterlab
 ```
