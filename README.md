@@ -1,3 +1,5 @@
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/amalic/jupyterlab)
+
 ## Jupterlab Docker container
 
 This Docker container runs as root user! It can be helpful when e.g. the popular jupyter/datascience-notebook image does not work because it runs as Jovyan user. 
