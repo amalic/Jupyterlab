@@ -1,3 +1,4 @@
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/amalic/jupyterlab)
 
 ## Jupterlab Docker container
