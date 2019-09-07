@@ -3,7 +3,7 @@
 
 ## Jupterlab Docker container
 
-This Docker container runs as root user! It can be helpful when e.g. the popular jupyter/datascience-notebook image does not work because it runs as Jovyan user. 
+**This Docker container runs as root user!** It can be helpful when e.g. the popular jupyter/datascience-notebook image does not work because it runs as Jovyan user. 
 
 #### Installed Jpyterlab extensions
 - [Jupyter Widgets](https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20Basics.html)
