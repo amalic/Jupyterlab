@@ -19,6 +19,10 @@ echo
 echo "Installed Python packages:"
 pip list -l
 
+echo
+echo "Installed Juypter extensions"
+jupyter labextension list
+
 CMD="jupyter lab --allow-root --ip=0.0.0.0 --no-browser"
 
 if [[ -v PASSWORD ]]; then
@@ -26,4 +30,5 @@ if [[ -v PASSWORD ]]; then
   CMD="$CMD --NotebookApp.token='' --NotebookApp.password='${PASSWORD}'"
 fi
 
+echo
 exec $CMD
