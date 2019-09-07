@@ -23,5 +23,6 @@ COPY config/jupyter_notebook_config.py /root/.jupyter/
 COPY config/plugin.jupyterlab-settings /root/.jupyter/lab/user-settings/@jupyterlab/terminal-extension/
 
 EXPOSE 8888
+VOLUME /notebooks
 WORKDIR /notebooks
 ENTRYPOINT ["entrypoint.sh"]
