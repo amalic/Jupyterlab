@@ -4,6 +4,7 @@ RUN git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it && \
   bash ~/.bash_it/install.sh --silent
 
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
+  apt-get upgrade -y && \
   apt-get install -y nodejs texlive-latex-extra texlive-xetex && \
   rm -rf /var/lib/apt/lists/*
 
