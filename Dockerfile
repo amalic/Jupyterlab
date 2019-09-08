@@ -4,7 +4,9 @@ RUN git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it && \
   bash ~/.bash_it/install.sh --silent
 
 RUN apt-get update && \
-  apt-get install -y npm texlive-latex-extra texlive-xetex && \
+  apt-get install -y software-properties-common && \
+  curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
+  apt-get install -y nodejs texlive-latex-extra texlive-xetex && \
   rm -rf /var/lib/apt/lists/*
 
 RUN pip install jupyterlab ipywidgets jupyterlab_latex plotly bokeh numpy scipy matplotlib ipython pandas sympy seaborn nose
