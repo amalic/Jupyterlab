@@ -1,6 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/amalic/Jupyterlab/blob/master/LICENSE)
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/amalic/jupyterlab)
-[![Docker Pulls](https://img.shields.io/docker/pulls/amalic/jupyterlab.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/amalic/jupyterlab/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/amalic/jupyterlab.svg)](https://hub.docker.com/r/amalic/jupyterlab/)
 
 
 ## Jupterlab Docker container
