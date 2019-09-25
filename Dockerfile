@@ -31,12 +31,10 @@ RUN pip install --upgrade \
     @jupyterlab/plotly-extension \
     jupyterlab_bokeh \
     jupyterlab-spreadsheet \
-    @jupyterlab/git && \
-  jupyter serverextension enable --py jupyterlab_git
+    @jupyterlab/git
 
 COPY bin/entrypoint.sh /usr/local/bin/
-COPY config/jupyter_notebook_config.py /root/.jupyter/
-COPY config/plugin.jupyterlab-settings /root/.jupyter/lab/user-settings/@jupyterlab/terminal-extension/
+COPY config/ /root/.jupyter/
 
 EXPOSE 8888
 VOLUME /notebooks
