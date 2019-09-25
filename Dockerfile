@@ -16,6 +16,10 @@ RUN pip install --upgrade \
     bokeh \
     numpy \
     scipy \
+    numexpr \
+    patsy \
+    scikit-learn \
+    scikit-image \
     matplotlib \
     ipython \
     pandas \
