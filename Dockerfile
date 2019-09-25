@@ -34,7 +34,6 @@ RUN pip install --upgrade \
     @jupyterlab/git && \
   jupyter serverextension enable --py jupyterlab_git
 
-
 COPY bin/entrypoint.sh /usr/local/bin/
 COPY config/jupyter_notebook_config.py /root/.jupyter/
 COPY config/plugin.jupyterlab-settings /root/.jupyter/lab/user-settings/@jupyterlab/terminal-extension/
