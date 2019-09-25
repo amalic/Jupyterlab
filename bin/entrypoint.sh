@@ -31,4 +31,4 @@ echo "Installed Juypter extensions"
 jupyter labextension list
 
 echo
-exec $CMD
+exec $CMD "$@"
