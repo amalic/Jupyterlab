@@ -8,29 +8,32 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
   apt-get install -y nodejs texlive-latex-extra texlive-xetex && \
   rm -rf /var/lib/apt/lists/*
 
-RUN pip install \
-  jupyterlab==1.1.4 \
-  ipywidgets \
-  jupyterlab_latex \
-  plotly \
-  bokeh \
-  numpy \
-  scipy \
-  matplotlib \
-  ipython \
-  pandas \
-  sympy \
-  seaborn \
-  nose
+RUN pip install --upgrade \
+    jupyterlab==1.1.4 \
+    ipywidgets \
+    jupyterlab_latex \
+    plotly \
+    bokeh \
+    numpy \
+    scipy \
+    matplotlib \
+    ipython \
+    pandas \
+    sympy \
+    seaborn \
+    nose \
+    jupyterlab-git && \
+  jupyter labextension install \
+    @jupyter-widgets/jupyterlab-manager \
+    @jupyterlab/latex \
+    @mflevine/jupyterlab_html \
+    jupyterlab-drawio \
+    @jupyterlab/plotly-extension \
+    jupyterlab_bokeh \
+    jupyterlab-spreadsheet \
+    @jupyterlab/git && \
+  jupyter serverextension enable --py jupyterlab_git
 
-RUN jupyter labextension install \
-  @jupyter-widgets/jupyterlab-manager \
-  @jupyterlab/latex \
-  @mflevine/jupyterlab_html \
-  jupyterlab-drawio \
-  @jupyterlab/plotly-extension \
-  jupyterlab_bokeh \
-  jupyterlab-spreadsheet
 
 COPY bin/entrypoint.sh /usr/local/bin/
 COPY config/jupyter_notebook_config.py /root/.jupyter/
