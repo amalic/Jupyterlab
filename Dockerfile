@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3
 
 RUN git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it && \
   bash ~/.bash_it/install.sh --silent
@@ -9,7 +9,7 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
   rm -rf /var/lib/apt/lists/*
 
 RUN pip install --upgrade \
-    jupyterlab==1.2.4 \
+    jupyterlab==1.2.5 \
     ipywidgets \
     jupyterlab_latex \
     plotly \
