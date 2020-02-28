@@ -8,7 +8,8 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
   apt-get install -y nodejs texlive-latex-extra texlive-xetex && \
   rm -rf /var/lib/apt/lists/*
 
-RUN pip install --upgrade \
+RUN pip install --upgrade pip && \
+  pip install --upgrade \
     jupyterlab==1.2.6 \
     ipywidgets \
     jupyterlab_latex \
