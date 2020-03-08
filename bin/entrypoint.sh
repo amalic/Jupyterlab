@@ -19,7 +19,7 @@ else
 fi
 
 if [ -f /notebooks/jupyter_install.sh ]; then
-  echo "INFO: Found jupyter_install.sh file in folder /notebooks. Executing it."
+  echo "INFO: Found jupyter_install.sh file in folder /notebooks. Executing it to install additional Jupyter extensions and kernels."
   ./jupyter_install.sh
 else
   echo "INFO: jupyter_install.sh not found in folder /notebooks --> Continuing"
