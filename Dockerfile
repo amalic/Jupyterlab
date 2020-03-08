@@ -34,7 +34,7 @@ RUN pip install --upgrade pip && \
     @mflevine/jupyterlab_html \
     jupyterlab-drawio \
     @jupyterlab/plotly-extension \
-    jupyterlab_bokeh \
+    @bokeh/jupyter_bokeh \
     jupyterlab-spreadsheet \
     @jupyterlab/git
 

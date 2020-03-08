@@ -39,7 +39,16 @@ or if you want to define your own password
 docker run --rm -it -p 8888:8888 -e PASSWORD="<your_secret>" amalic/jupyterlab
 ```
 
+or provide a Git repository to clone in `/notebooks` at start
+
+```bash
+docker run --rm -it -p 8888:8888 -v /data/notebooks-test:/notebooks -e PASSWORD="<your_secret>" -e GIT_URL="https://github.com/vemonet/translator-sparql-notebook" umids/jupyterlab:latest
+```
+
+
+
 ### Build from source
+
 ```
 docker build -t amalic/jupyterlab .
 ```
