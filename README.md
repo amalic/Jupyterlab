@@ -14,7 +14,7 @@
 - [@mflevine/jupyterlab_html](https://github.com/mflevine/jupyterlab_html)
 - [jupyterlab-drawio](https://github.com/QuantStack/jupyterlab-drawio)
 - [jupyterlab-spreadsheet](https://github.com/quigleyj97/jupyterlab-spreadsheet)
-- [jupyterlab_bokeh](https://github.com/bokeh/jupyterlab_bokeh)
+- [@bokeh/jupyter_bokeh](https://github.com/bokeh/jupyter_bokeh)
 - [@jupyterlab/toc](https://www.npmjs.com/package/@jupyterlab/toc)
 - [@jupyterlab/git](https://www.npmjs.com/package/@jupyterlab/git)
 
@@ -25,30 +25,34 @@ Volumes can be mounted into `/notebooks` folder. If the folder contains a requir
 ---
 
 ### Pull/Update to latest version
-```
+```bash
 docker pull amalic/jupyterlab:latest
 ```
 
 ### Run
-```
+```bash
 docker run --rm -it -p 8888:8888 amalic/jupyterlab
 ```
 
 or if you want to define your own password
-```
+```bash
 docker run --rm -it -p 8888:8888 -e PASSWORD="<your_secret>" amalic/jupyterlab
 ```
 
-or provide a Git repository to clone in `/notebooks` at start
+or provide a Git repository to clone in `/notebooks` when doing `docker run`
 
 ```bash
-docker run --rm -it -p 8888:8888 -v /data/notebooks-test:/notebooks -e PASSWORD="<your_secret>" -e GIT_URL="https://github.com/vemonet/translator-sparql-notebook" umids/jupyterlab:latest
+docker run --rm -it -p 8888:8888 -v /data/jupyterlab-notebooks:/notebooks -e PASSWORD="<your_secret>" -e GIT_URL="https://github.com/vemonet/translator-sparql-notebook" umids/jupyterlab:latest
 ```
 
+> Access on http://localhost:8888 and files shared in `/data/jupyterlab-notebooks`
 
+If the Git repository contains a `requirements.txt` or `jupyter_install.sh` at its root, they will be executed at runtime.
+
+> The `jupyter_install.sh` script allows to install Jupyter extensions, such as new kernels, at runtime using Bash. e.g. `jupyter sparqlkernel install --user`
 
 ### Build from source
 
-```
+```bash
 docker build -t amalic/jupyterlab .
 ```
