@@ -18,6 +18,13 @@ else
   echo "INFO: requirements.txt not found in folder /notebooks --> Continuing"
 fi
 
+if [ -f /notebooks/jupyter_install.sh ]; then
+  echo "INFO: Found jupyter_install.sh file in folder /notebooks. Executing it."
+  ./jupyter_install.sh
+else
+  echo "INFO: jupyter_install.sh not found in folder /notebooks --> Continuing"
+fi
+
 echo
 echo "Installed software:"
 python --version
