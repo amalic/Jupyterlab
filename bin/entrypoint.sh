@@ -7,6 +7,10 @@ if [[ -v PASSWORD ]]; then
   CMD="$CMD --NotebookApp.token='' --NotebookApp.password='${PASSWORD}'"
 fi
 
+if [[ -v GIT_URL ]]; then
+  git clone $GIT_URL /notebooks
+fi
+
 if [ -f /notebooks/requirements.txt ]; then
   echo "INFO: Found requirements.txt file in folder /notebooks. Installing via \"pip install -r requirements.txt\""
   pip install -r requirements.txt
