@@ -11,11 +11,11 @@ if [[ -v GIT_URL ]]; then
   git clone $GIT_URL /notebooks
 fi
 
-if [ -f /notebooks/install.sh ]; then
-  echo "INFO: Found install.sh file in folder /notebooks. Executing it to install apt packages, Jupyter extensions and kernels."
-  ./install.sh
+if [ -f /notebooks/packages.txt ]; then
+  echo "INFO: Found packages.txt file in folder /notebooks. Executing it to install apt packages."
+  xargs -a packages.txt sudo apt-get install
 else
-  echo "INFO: install.sh not found in folder /notebooks --> Continuing"
+  echo "INFO: packages.txt not found in folder /notebooks --> Continuing"
 fi
 
 if [ -f /notebooks/requirements.txt ]; then
@@ -23,6 +23,13 @@ if [ -f /notebooks/requirements.txt ]; then
   pip install -r requirements.txt
 else
   echo "INFO: requirements.txt not found in folder /notebooks --> Continuing"
+fi
+
+if [ -f /notebooks/extensions.txt ]; then
+  echo "INFO: Found extensions.txt file in folder /notebooks. Installing via \"jupyter extension install --user\""
+  cat extensions.txt | xargs -I {} echo jupyter {} install --user
+else
+  echo "INFO: extensions.txt not found in folder /notebooks --> Continuing"
 fi
 
 echo
