@@ -33,7 +33,6 @@ RUN pip install --upgrade pip && \
   jupyter labextension install \
     @jupyter-widgets/jupyterlab-manager \
     @jupyterlab/latex \
-    @mflevine/jupyterlab_html \
     jupyterlab-drawio \
     @jupyterlab/plotly-extension \
     @bokeh/jupyter_bokeh \
