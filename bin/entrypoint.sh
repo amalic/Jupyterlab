@@ -11,18 +11,18 @@ if [[ -v GIT_URL ]]; then
   git clone $GIT_URL /notebooks
 fi
 
+if [ -f /notebooks/jupyter_install.sh ]; then
+  echo "INFO: Found install.sh file in folder /notebooks. Executing it to install apt packages, Jupyter extensions and kernels."
+  ./install.sh
+else
+  echo "INFO: install.sh not found in folder /notebooks --> Continuing"
+fi
+
 if [ -f /notebooks/requirements.txt ]; then
   echo "INFO: Found requirements.txt file in folder /notebooks. Installing via \"pip install -r requirements.txt\""
   pip install -r requirements.txt
 else
   echo "INFO: requirements.txt not found in folder /notebooks --> Continuing"
-fi
-
-if [ -f /notebooks/jupyter_install.sh ]; then
-  echo "INFO: Found jupyter_install.sh file in folder /notebooks. Executing it to install additional Jupyter extensions and kernels."
-  ./jupyter_install.sh
-else
-  echo "INFO: jupyter_install.sh not found in folder /notebooks --> Continuing"
 fi
 
 echo
