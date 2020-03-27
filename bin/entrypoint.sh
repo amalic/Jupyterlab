@@ -11,7 +11,7 @@ if [[ -v GIT_URL ]]; then
   git clone $GIT_URL /notebooks
 fi
 
-if [ -f /notebooks/jupyter_install.sh ]; then
+if [ -f /notebooks/install.sh ]; then
   echo "INFO: Found install.sh file in folder /notebooks. Executing it to install apt packages, Jupyter extensions and kernels."
   ./install.sh
 else
