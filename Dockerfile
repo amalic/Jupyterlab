@@ -33,8 +33,8 @@ RUN pip install --upgrade pip && \
   jupyter labextension install \
     @jupyter-widgets/jupyterlab-manager \
     @jupyterlab/latex \
-    jupyterlab-drawio \
-    @jupyterlab/plotly-extension \
+    # jupyterlab-drawio \ https://github.com/QuantStack/jupyterlab-drawio/issues/54
+    jupyterlab-plotly \
     @bokeh/jupyter_bokeh \
     jupyterlab-spreadsheet \
     @jupyterlab/git
