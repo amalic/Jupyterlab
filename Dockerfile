@@ -36,8 +36,8 @@ RUN pip install --upgrade pip && \
     # jupyterlab-drawio \ https://github.com/QuantStack/jupyterlab-drawio/issues/54
     jupyterlab-plotly \
     @bokeh/jupyter_bokeh \
-    jupyterlab-spreadsheet \
-    @jupyterlab/git
+    # @jupyterlab/git / # https://github.com/jupyterlab/jupyterlab-git/pull/520
+    jupyterlab-spreadsheet 
 
 COPY bin/entrypoint.sh /usr/local/bin/
 COPY config/ /root/.jupyter/
