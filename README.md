@@ -47,7 +47,7 @@ docker run --rm -it -p 8888:8888 -v /data/jupyterlab-notebooks:/notebooks -e PAS
 
 > Access on http://localhost:8888 and files shared in `/data/jupyterlab-notebooks`
 
-If the Git repository contains a `requirements.txt` or `jupyter_install.sh` at its root, they will be executed at runtime.
+If the Git repository contains a `requirements.txt` or `packages.txt` (for apt packages) or `extensions.txt` (for ) at its root, they will be executed at runtime.
 
 > The `jupyter_install.sh` script allows to install Jupyter extensions, such as new kernels, at runtime using Bash. e.g. `jupyter sparqlkernel install --user`
 

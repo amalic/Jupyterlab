@@ -13,7 +13,7 @@ fi
 
 if [ -f /notebooks/packages.txt ]; then
   echo "INFO: Found packages.txt file in folder /notebooks. Executing it to install apt packages."
-  xargs -a packages.txt sudo apt-get install
+  cat extensions.txt | xargs apt-get install
 else
   echo "INFO: packages.txt not found in folder /notebooks --> Continuing"
 fi
@@ -27,7 +27,7 @@ fi
 
 if [ -f /notebooks/extensions.txt ]; then
   echo "INFO: Found extensions.txt file in folder /notebooks. Installing via \"jupyter extension install --user\""
-  cat extensions.txt | xargs -I {} echo jupyter {} install --user
+  cat extensions.txt | xargs -I {} jupyter {} install --user
 else
   echo "INFO: extensions.txt not found in folder /notebooks --> Continuing"
 fi
