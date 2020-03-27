@@ -13,7 +13,8 @@ fi
 
 if [ -f /notebooks/packages.txt ]; then
   echo "INFO: Found packages.txt file in folder /notebooks. Executing it to install apt packages."
-  cat extensions.txt | xargs apt-get install
+  apt-get update
+  cat packages.txt | xargs apt-get install -y
 else
   echo "INFO: packages.txt not found in folder /notebooks --> Continuing"
 fi
