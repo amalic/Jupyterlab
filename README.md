@@ -3,11 +3,11 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/amalic/jupyterlab.svg)](https://hub.docker.com/r/amalic/jupyterlab/)
 
 
-## Jupterlab Docker container
+## Jupyterlab Docker container
 
 **This Docker container runs as root user!** It can be helpful when e.g. the popular jupyter/datascience-notebook image does not work because it runs as Jovyan user. 
 
-#### Installed Jpyterlab extensions
+#### Installed Jupyterlab extensions
 - [Jupyter Widgets](https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20Basics.html)
 - [@jupyterlab/latex](https://github.com/jupyterlab/jupyterlab-latex)
 - [jupyterlab-plotly](https://www.npmjs.com/package/jupyterlab-plotly)
