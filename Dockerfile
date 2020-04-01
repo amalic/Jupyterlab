@@ -31,12 +31,12 @@ RUN pip install --upgrade pip && \
   jupyter labextension install \
     @jupyter-widgets/jupyterlab-manager \
     @jupyterlab/latex \
+    jupyterlab-drawio \ 
+    jupyterlab-plotly \
+    @bokeh/jupyter_bokeh \
+    @jupyterlab/git \
     @mflevine/jupyterlab_html \
-    jupyterlab-drawio \
-    @jupyterlab/plotly-extension \
-    jupyterlab_bokeh \
-    jupyterlab-spreadsheet \
-    @jupyterlab/git
+    jupyterlab-spreadsheet 
 
 COPY bin/entrypoint.sh /usr/local/bin/
 COPY config/ /root/.jupyter/
