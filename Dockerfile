@@ -32,13 +32,10 @@ RUN pip install --upgrade pip && \
     @jupyter-widgets/jupyterlab-manager \
     @jupyterlab/latex \
     jupyterlab-drawio \ 
-    #https://github.com/QuantStack/jupyterlab-drawio/issues/54
     jupyterlab-plotly \
     @bokeh/jupyter_bokeh \
     @jupyterlab/git \
-    # https://github.com/jupyterlab/jupyterlab-git/pull/520
     @mflevine/jupyterlab_html \
-    # ^to be removed at 2.0.1, now integrated
     jupyterlab-spreadsheet 
 
 COPY bin/entrypoint.sh /usr/local/bin/
