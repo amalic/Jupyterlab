@@ -10,7 +10,9 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
 
 RUN pip install --upgrade pip && \
   pip install --upgrade \
-    jupyterlab==1.2.6 \
+    jupyterlab==2.0.1 \
+    nbdev \
+    xeus-python \
     ipywidgets \
     jupyterlab_latex \
     plotly \
@@ -26,17 +28,17 @@ RUN pip install --upgrade pip && \
     pandas \
     sympy \
     seaborn \
-    nose \
-    jupyterlab-git && \
-  jupyter labextension install \
-    @jupyter-widgets/jupyterlab-manager \
+    nose
+    
+RUN jupyter labextension install \
+    @jupyter-widgets/jupyterlab-manager@2.0 \
+    @jupyterlab/debugger \
     @jupyterlab/latex \
-    @mflevine/jupyterlab_html \
-    jupyterlab-drawio \
-    @jupyterlab/plotly-extension \
-    jupyterlab_bokeh \
-    jupyterlab-spreadsheet \
-    @jupyterlab/git
+#    jupyterlab-drawio \
+    jupyterlab-plotly \
+    @jupyterlab/toc \
+    @bokeh/jupyter_bokeh \
+    jupyterlab-spreadsheet
 
 COPY bin/entrypoint.sh /usr/local/bin/
 COPY config/ /root/.jupyter/

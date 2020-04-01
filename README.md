@@ -8,15 +8,13 @@
 **This Docker container runs as root user!** It can be helpful when e.g. the popular jupyter/datascience-notebook image does not work because it runs as Jovyan user. 
 
 #### Installed Jpyterlab extensions
-- [Jupyter Widgets](https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20Basics.html)
+- [Jupyter Manager](https://github.com/jupyter-widgets/ipywidgets/tree/master/packages/jupyterlab-manager)
 - [@jupyterlab/latex](https://github.com/jupyterlab/jupyterlab-latex)
-- [@jupyterlab/plotly-extension](https://github.com/jupyterlab/jupyter-renderers/tree/master/packages/plotly-extension)
-- [@mflevine/jupyterlab_html](https://github.com/mflevine/jupyterlab_html)
+- [@jupyterlab/plotly-extension](https://plotly.com/python/getting-started/#overview)
 - [jupyterlab-drawio](https://github.com/QuantStack/jupyterlab-drawio)
 - [jupyterlab-spreadsheet](https://github.com/quigleyj97/jupyterlab-spreadsheet)
 - [jupyterlab_bokeh](https://github.com/bokeh/jupyterlab_bokeh)
 - [@jupyterlab/toc](https://www.npmjs.com/package/@jupyterlab/toc)
-- [@jupyterlab/git](https://www.npmjs.com/package/@jupyterlab/git)
 
 ### Your notebooks
 
