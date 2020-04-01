@@ -27,8 +27,6 @@ RUN pip install --upgrade pip && \
     sympy \
     seaborn \
     nose \
-    rdflib \
-    SPARQLWrapper \
     jupyterlab-git && \
   jupyter labextension install \
     @jupyter-widgets/jupyterlab-manager \
