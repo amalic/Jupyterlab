@@ -28,9 +28,10 @@ RUN pip install --upgrade pip && \
     pandas \
     sympy \
     seaborn \
-    nose
-    
-RUN jupyter labextension install \
+    nose \
+#    jupyterlab-git \
+    && \  
+  jupyter labextension install \
     @jupyter-widgets/jupyterlab-manager@2.0 \
     @jupyterlab/debugger \
     @jupyterlab/latex \
