@@ -50,7 +50,7 @@ The container will install requirements from files present at the root of the re
 You can provide a Git repository to be cloned in `/notebooks` when doing `docker run`
 
 ```bash
-docker run --rm -it -p 8888:8888 -v /data/jupyterlab-notebooks:/notebooks -e PASSWORD="<your_secret>" -e GIT_URL="https://github.com/vemonet/translator-sparql-notebook" umids/jupyterlab:latest
+docker run --rm -it -p 8888:8888 -v /data/jupyterlab-notebooks:/notebooks -e PASSWORD="<your_secret>" -e GIT_URL="https://github.com/vemonet/translator-sparql-notebook" amalic/jupyterlab:latest
 ```
 
 > Access on http://localhost:8888 and files shared in `/data/jupyterlab-notebooks`
@@ -58,7 +58,7 @@ docker run --rm -it -p 8888:8888 -v /data/jupyterlab-notebooks:/notebooks -e PAS
 or use the current directory as source code in the container:
 
 ```bash
-docker run --rm -it -p 8888:8888 -v $(pwd):/notebooks -e PASSWORD="<your_secret>" umids/jupyterlab:latest
+docker run --rm -it -p 8888:8888 -v $(pwd):/notebooks -e PASSWORD="<your_secret>" amalic/jupyterlab:latest
 ```
 
 > Use `${pwd}` for Windows
