@@ -12,6 +12,8 @@ RUN pip install --upgrade pip && \
   pip install --upgrade \
     jupyterlab>=2.0.0 \
     ipywidgets \
+    jedi==0.15.2 \ 
+    # jupyterlab-lsp does not support 0.17
     jupyterlab_latex \
     plotly \
     bokeh \
@@ -27,6 +29,8 @@ RUN pip install --upgrade pip && \
     sympy \
     seaborn \
     nose \
+    jupyter-lsp \
+    python-language-server \
     jupyterlab-git && \
   jupyter labextension install \
     @jupyter-widgets/jupyterlab-manager \
@@ -34,6 +38,7 @@ RUN pip install --upgrade pip && \
     jupyterlab-drawio \ 
     jupyterlab-plotly \
     @bokeh/jupyter_bokeh \
+    @krassowski/jupyterlab-lsp \
     @jupyterlab/git \
     jupyterlab-spreadsheet 
 
