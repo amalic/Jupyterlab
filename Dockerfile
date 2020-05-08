@@ -10,7 +10,7 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
 
 RUN pip install --upgrade pip && \
   pip install --upgrade \
-    jupyterlab==1.2.6 \
+    jupyterlab>=2.0.0 \
     ipywidgets \
     jupyterlab_latex \
     plotly \
@@ -35,7 +35,6 @@ RUN pip install --upgrade pip && \
     jupyterlab-plotly \
     @bokeh/jupyter_bokeh \
     @jupyterlab/git \
-    @mflevine/jupyterlab_html \
     jupyterlab-spreadsheet 
 
 COPY bin/entrypoint.sh /usr/local/bin/
