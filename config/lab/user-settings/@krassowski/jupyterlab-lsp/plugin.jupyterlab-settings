@@ -1,0 +1,14 @@
+{
+  "continuousHinting": true,
+  "showDocumentation": true,
+  "language_servers": {
+    "pyls": {
+      "serverSettings": {
+        "pyls.plugins.pydocstyle.enabled": false,
+        "pyls.plugins.pyflakes.enabled": true,
+        "pyls.plugins.flake8.enabled": false
+      }
+    }
+  }
+}
+
