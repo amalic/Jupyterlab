@@ -5,7 +5,7 @@
 
 ## Jupyterlab Docker container
 
-**This Docker container runs as root user!** It can be helpful when e.g. the popular jupyter/datascience-notebook image does not work because it runs as Jovyan user. 
+**This Docker container runs as root user!** It can be helpful when e.g. the popular jupyter/datascience-notebook image does not work because it runs as Jovyan user.
 
 #### Installed Jupyterlab extensions
 - [Jupyter Widgets](https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20Basics.html)
@@ -68,3 +68,21 @@ docker run --rm -it -p 8888:8888 -v $(pwd):/notebooks -e PASSWORD="<your_secret>
 ```bash
 docker build -t amalic/jupyterlab .
 ```
+
+## VSCode
+
+You can run VS Code in browser:
+
+```bash
+docker run --rm -it -p 8443:8443 -v $(pwd):/notebooks --entrypoint="vscode.sh" amalic/jupyterlab:latest
+```
+> Access on http://localhost:8443
+
+VS Code comes with some extensions preinstalled.
+- Python
+- Java
+- Prettier
+- Jupyter
+- Code Runner
+- ESLint
+
